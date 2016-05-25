@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">JSF</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_jobs_list">JobsList</string>
+    <string name="title_activity_events_list">EventsList</string>
+    <string name="title_activity_test">test</string>
+    <string name="title_activity_job_post">JobPost</string>
+    <string name="title_activity_event">Event</string>
+    <string name="title_activity_news">News</string>
+</resources>
