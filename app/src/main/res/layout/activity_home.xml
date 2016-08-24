@@ -2,27 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#1273bf">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:background="#800080"
+        android:background="#1273bf"
         android:gravity="center"
-        android:text="Job Search Forum"
+        android:text="Job Seekers Forum"
         android:textColor="#ffffff" />
-
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="5dp"
-        android:background="@color/background_material_light"></View>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="4"
-        android:orientation="horizontal">
+        android:layout_height="fill_parent"
+        android:layout_weight="5"
+        android:orientation="horizontal"
+        android:background="#1273bf">
 
         <LinearLayout
             android:id="@+id/JobsTab"
@@ -30,61 +27,25 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:onClick="tabClicked"
+            android:gravity="center|bottom"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:src="@drawable/jobs" />
-
-            <RelativeLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:orientation="horizontal"
-                android:layout_weight="1"
-                android:gravity="center_horizontal"
-                >
-
-                <TextView
-                    android:id="@+id/jobs_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Jobs"
-                    android:textColor="#ffffff" />
-                <View
-                    android:id="@+id/seperator_jobs"
-                    android:layout_width="5dp"
-                    android:layout_height="10dp"
-                    android:layout_toRightOf="@id/jobs_name"
-                    >
-
-                </View>
-                <RelativeLayout
-                    android:id="@+id/circle_jobs"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center"
-                    android:layout_toRightOf="@id/seperator_jobs"
-                    android:background="@drawable/circle_shape" >
-
-                    <TextView
-                        android:id="@+id/updates_count_jobs"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:text="5" />
-                </RelativeLayout>
-            </RelativeLayout>
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="JOBS"
+                android:id="@+id/jobs_name"
+                android:textColor="#ffffff" />
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="5dp"
+                android:id="@+id/jobs_decorator"
+                android:background="#ffffff"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"></View>
 
         </LinearLayout>
-
-        <View
-            android:layout_width="5dp"
-            android:layout_height="fill_parent"
-            android:background="@color/background_material_light"></View>
 
         <LinearLayout
             android:id="@+id/EventsTab"
@@ -92,62 +53,26 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:onClick="tabClicked"
+            android:gravity="center|bottom"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:src="@drawable/events" />
-
-            <RelativeLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:orientation="horizontal"
-                android:layout_weight="1"
-                android:gravity="center_horizontal"
-                >
-
-                <TextView
-                    android:id="@+id/events_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Events"
-                    android:textColor="#ffffff" />
-                <View
-                    android:id="@+id/seperator_events"
-                    android:layout_width="5dp"
-                    android:layout_height="10dp"
-                    android:layout_toRightOf="@id/events_name"
-                    >
-
-                </View>
-                <RelativeLayout
-                    android:id="@+id/circle_events"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center"
-                    android:layout_toRightOf="@id/seperator_events"
-                    android:background="@drawable/circle_shape" >
-
-                    <TextView
-                        android:id="@+id/updates_count_events"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-
-                        android:text="5" />
-                </RelativeLayout>
-            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EVENTS"
+                android:id="@+id/events_name"
+                android:textColor="#ffffff" />
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="5dp"
+                android:id="@+id/events_decorator"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"></View>
 
 
         </LinearLayout>
 
-        <View
-            android:layout_width="5dp"
-            android:layout_height="fill_parent"
-            android:background="@color/background_material_light"></View>
 
         <LinearLayout
             android:id="@+id/NewsTab"
@@ -155,64 +80,27 @@
             android:layout_height="fill_parent"
             android:layout_weight="1"
             android:onClick="tabClicked"
+            android:gravity="center|bottom"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:src="@drawable/news" />
-
-            <RelativeLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:orientation="horizontal"
-                android:layout_weight="1"
-                android:gravity="center_horizontal"
-                >
-
-                <TextView
-                    android:id="@+id/news_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="News"
-                    android:textColor="#ffffff" />
-                <View
-                    android:id="@+id/seperator_news"
-                    android:visibility="gone"
-                    android:layout_width="5dp"
-                    android:layout_height="10dp"
-                    android:layout_toRightOf="@id/news_name"
-                    >
-
-                </View>
-                <RelativeLayout
-                    android:id="@+id/circle_news"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center"
-                    android:layout_toRightOf="@id/seperator_news"
-                    android:background="@drawable/circle_shape" >
-
-                    <TextView
-                        android:id="@+id/updates_count_news"
-                        android:visibility="gone"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:text="5" />
-                </RelativeLayout>
-            </RelativeLayout>
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NEWS"
+                android:id="@+id/jobs_news"
+                android:textColor="#ffffff" />
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="5dp"
+                android:id="@+id/news_decorator"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"></View>
 
         </LinearLayout>
+
     </LinearLayout>
 
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="5dp"
-        android:background="@color/background_material_light"></View>
 
     <ListView
         android:id="@+id/list_view"

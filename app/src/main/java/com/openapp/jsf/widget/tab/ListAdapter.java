@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.openapp.jsf.activities.R;
 import com.openapp.jsf.domain.Item;
+import com.openapp.jsf.domain.JobPost;
 
 import java.util.ArrayList;
 
@@ -26,19 +27,16 @@ public class ListAdapter extends ArrayAdapter<Item> {
         this.items = items;
         inflater = (LayoutInflater)getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
+    private void setText(int id, View view, String text){
+        ((TextView) view.findViewById(id)).setText(text);
+    }
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
         View listItem = inflater.inflate(R.layout.list_item, null);
-        TextView textView = (TextView) listItem.findViewById(R.id.text);
-        textView.setText(items.get(position).getTitle());
-        View item = listItem.findViewById(R.id.item);
-        if(items.get(position).isRead())
-            item.setBackgroundResource(R.drawable.round_rect_shape_read_item);
-        else
-            item.setBackgroundResource(R.drawable.round_rect_shape_unread_item);
-
-
+        Item item = items.get(position);
+        setText(R.id.JobTitle, listItem, item.getTitle());
+        setText(R.id.Employer, listItem, ((JobPost)item).getEmployer());
         return listItem ;
     }
 }

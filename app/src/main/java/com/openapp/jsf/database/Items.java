@@ -119,7 +119,8 @@ public class Items extends SQLiteOpenHelper implements Serializable{
         Cursor cursor = db.rawQuery("select max("+COLUMN_TIMESTAMP+") from "+TABLE_ITEMS,null );
         if(cursor.getCount() == 1) {
             cursor.moveToFirst();
-            return cursor.getString(0);
+            String timestamp = cursor.getString(0);
+            return timestamp == null ? DEFAULT_TIMESTAMP :timestamp;
         }
         return DEFAULT_TIMESTAMP;
     }
