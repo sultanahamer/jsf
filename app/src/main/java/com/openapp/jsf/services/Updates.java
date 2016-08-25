@@ -30,7 +30,7 @@ import java.nio.charset.Charset;
 
 public class Updates extends Service  implements Runnable{
     private Items itemsDBHelper;
-    private final int SLEEP_TIME = (1000 * 60)* 10 * 0 + 1000; //10 MINUTES
+    private final int SLEEP_TIME = (1000 * 60)* 10; //10 MINUTES
     private final int SERVER_PORT = 3000;
     private final String SERVER_ADDRESS = "10.0.2.2";
     private final int CHAR_BUFFER_LENGTH = 1024;

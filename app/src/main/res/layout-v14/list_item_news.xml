@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minHeight="20dp"
+    android:orientation="vertical"
+    android:paddingLeft="4dp"
+    android:background="#ffffff"
+    android:paddingRight="4dp"
+    android:paddingTop="4dp">
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:minHeight="50dp"
+        android:background="@drawable/background_with_shadow"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_marginBottom="10dp"
+        >
+
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/news_thumbnail"
+        android:src="@drawable/time"></ImageView>
+    <TextView
+        android:textSize="20dp"
+        android:layout_toRightOf="@id/news_thumbnail"
+        android:id="@+id/news_title"
+        android:textColor="#1273bf"
+        android:text="This shoud be a very very very very very very very long title"
+        android:paddingBottom="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:textSize="15dp"
+        android:layout_toRightOf="@id/news_thumbnail"
+        android:id="@+id/news_content"
+        android:layout_below="@id/news_title"
+        android:text="this should be some small small small content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp" />
+    <View
+        android:layout_width="1px"
+        android:layout_height="1px"
+        android:id="@+id/placeholder"
+        android:layout_below="@id/news_content"
+        android:layout_toRightOf="@id/news_thumbnail"
+        >
+
+    </View>
+    <TextView
+        android:textSize="12dp"
+        android:textStyle="italic"
+        android:layout_below="@id/placeholder"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:gravity="end|right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/news_read_more"
+        android:textColor="#1273bf"
+        android:text="Read more..."
+        android:padding="5dp" />
+</RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

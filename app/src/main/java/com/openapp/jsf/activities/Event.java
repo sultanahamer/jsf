@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.widget.TextView;
 
-public class Event extends android.support.v7.app.ActionBarActivity {
+public class Event extends android.support.v7.app.AppCompatActivity {
 
     public static final String EXTRA_JOBPOST = "EVENT";
     @Override

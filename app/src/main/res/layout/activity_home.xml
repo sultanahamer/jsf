@@ -104,6 +104,8 @@
 
     <ListView
         android:id="@+id/list_view"
+        android:background="#ffffff"
+        android:paddingTop="15dp"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="1">

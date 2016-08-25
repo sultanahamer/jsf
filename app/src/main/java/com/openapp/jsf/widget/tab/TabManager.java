@@ -56,6 +56,7 @@ public class TabManager implements TabSelectionHandler{
 
     @Override
     public void onTabSelectionChanged(Tab tab) {
+        if(selectedTabIndex == tab.getIndex()) return;
         tabs[selectedTabIndex].deselectTab();
         selectedTabIndex = tab.getIndex();
         tab.selectTab();
