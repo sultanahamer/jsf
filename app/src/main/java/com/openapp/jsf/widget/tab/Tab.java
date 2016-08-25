@@ -4,12 +4,12 @@ import android.app.Activity;
 import android.graphics.Color;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.openapp.jsf.activities.R;
 import com.openapp.jsf.database.Items;
+import com.openapp.jsf.domain.Event;
 import com.openapp.jsf.domain.Item;
 import com.openapp.jsf.domain.JobPost;
 import com.openapp.jsf.domain.News;
@@ -53,7 +53,7 @@ public class Tab {
                 this.adapter = new JSFListAdapter(context) {
                     @Override
                     public View getView(int position, View convertView, ViewGroup parent) {
-                        View listItem = (convertView == null) ? inflater.inflate(R.layout.list_item_job, null) : convertView;
+                        View listItem = (convertView == null) ? inflater.inflate(R.layout.list_item_jobs, null) : convertView;
                         Item item = items.get(position);
                         setText(R.id.JobTitle, listItem, item.getTitle());
                         setText(R.id.Employer, listItem, ((JobPost)item).getEmployer());
@@ -66,10 +66,12 @@ public class Tab {
                 this.adapter = new JSFListAdapter(context) {
                     @Override
                     public View getView(int position, View convertView, ViewGroup parent) {
-                        View listItem = (convertView == null) ? inflater.inflate(R.layout.list_item_job, null) : convertView;
-                        Item item = items.get(position);
-                        setText(R.id.JobTitle, listItem, item.getTitle());
-                        setText(R.id.Employer, listItem, ((JobPost)item).getEmployer());
+                        View listItem = (convertView == null) ? inflater.inflate(R.layout.list_item_events, null) : convertView;
+                        Event event = (Event) items.get(position);
+                        setText(R.id.event_title_text, listItem, event.getTitle());
+                        setText(R.id.event_description_text, listItem, event.getDescription());
+                        setText(R.id.event_venue_text, listItem, event.getVenue());
+                        setText(R.id.event_time_text, listItem, event.getDatetime());
                         return listItem ;
                     }
                 };
